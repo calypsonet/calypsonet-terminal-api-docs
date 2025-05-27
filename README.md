@@ -17,8 +17,8 @@ This repository uses two main branches:
 To add documentation for a new library:
 
 ```bash
-# Switch to `doc` branch
-git checkout doc
+# Switch to `gh-pages` branch
+git checkout gh-pages
 
 # Add the submodule pointing to the doc branch
 git submodule add -b doc https://github.com/calypsonet/[library-name].git [library-name]
