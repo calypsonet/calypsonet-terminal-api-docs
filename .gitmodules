@@ -1,0 +1,4 @@
+[submodule "calypsonet-terminal-reader-uml-api"]
+	path = calypsonet-terminal-reader-uml-api
+	url = https://github.com/calypsonet/calypsonet-terminal-reader-uml-api
+	branch = doc
