@@ -1,0 +1,11 @@
+theme: jekyll-theme-minimal
+title: Calypso Networks Association Terminal API Documentation
+plugins:
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: "*/[0-9]*"
+    values:
+      sitemap: false
+include:
+  - "_*.html"
