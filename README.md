@@ -26,7 +26,7 @@ git submodule add -b doc https://github.com/calypsonet/[library-name].git [libra
 # Commit the changes
 git add .
 git commit -m "feat: add documentation for [library-name]"
-git push origin doc
+git push origin gh-pages
 ```
 
 ### Removing a Library Documentation
