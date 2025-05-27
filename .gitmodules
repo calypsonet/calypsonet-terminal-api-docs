@@ -2,3 +2,23 @@
 	path = calypsonet-terminal-reader-uml-api
 	url = https://github.com/calypsonet/calypsonet-terminal-reader-uml-api
 	branch = doc
+[submodule "calypsonet-terminal-calypso-crypto-asymmetric-uml-api"]
+	path = calypsonet-terminal-calypso-crypto-asymmetric-uml-api
+	url = https://github.com/calypsonet/calypsonet-terminal-calypso-crypto-asymmetric-uml-api
+	branch = doc
+[submodule "calypsonet-terminal-calypso-crypto-symmetric-uml-api"]
+	path = calypsonet-terminal-calypso-crypto-symmetric-uml-api
+	url = https://github.com/calypsonet/calypsonet-terminal-calypso-crypto-symmetric-uml-api
+	branch = doc
+[submodule "calypsonet-terminal-calypso-crypto-legacysam-uml-api"]
+	path = calypsonet-terminal-calypso-crypto-legacysam-uml-api
+	url = https://github.com/calypsonet/calypsonet-terminal-calypso-crypto-legacysam-uml-api
+	branch = doc
+[submodule "calypsonet-terminal-calypso-card-uml-api"]
+	path = calypsonet-terminal-calypso-card-uml-api
+	url = https://github.com/calypsonet/calypsonet-terminal-calypso-card-uml-api
+	branch = doc
+[submodule "calypsonet-terminal-card-uml-api"]
+	path = calypsonet-terminal-card-uml-api
+	url = https://github.com/calypsonet/calypsonet-terminal-card-uml-api
+	branch = doc
