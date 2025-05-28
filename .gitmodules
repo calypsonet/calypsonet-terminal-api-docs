@@ -50,3 +50,7 @@
 	path = archived/calypsonet-terminal-calypso-cpp-api
 	url = https://github.com/calypsonet/calypsonet-terminal-calypso-cpp-api
 	branch = doc
+[submodule "calypsonet-terminal-storagecard-uml-api"]
+	path = calypsonet-terminal-storagecard-uml-api
+	url = https://github.com/calypsonet/calypsonet-terminal-storagecard-uml-api
+	branch = doc
