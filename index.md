@@ -21,7 +21,7 @@
  </tbody>
 </table>
 
-#### Archived libraries
+#### Archived libraries (moved to [Eclipse Keypop project](https://keypop.org))
 
 <table>
  <tbody>
