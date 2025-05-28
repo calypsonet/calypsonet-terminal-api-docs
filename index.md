@@ -3,11 +3,6 @@
 #### All available Calypso Networks Association Terminal API documentation can be found below
 
 <table>
- <thead>
-   <tr>
-     <th>Component</th>
-   </tr>
- </thead>
  <tbody>
    {% assign dirs = site.pages | map: 'path' | sort %}
    {% assign seen_dirs = "" | split: "," %}
@@ -26,14 +21,9 @@
  </tbody>
 </table>
 
-#### Archived
+#### Archived libraries
 
 <table>
- <thead>
-   <tr>
-     <th>Component</th>
-   </tr>
- </thead>
  <tbody>
    {% assign archived_dirs = site.pages | map: 'path' | sort %}
    {% assign seen_archived_dirs = "" | split: "," %}
