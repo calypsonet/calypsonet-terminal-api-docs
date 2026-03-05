@@ -54,3 +54,7 @@
 	path = calypsonet-terminal-storagecard-uml-api
 	url = https://github.com/calypsonet/calypsonet-terminal-storagecard-uml-api
 	branch = doc
+[submodule "calypsonet-terminal-genericcard-uml-api"]
+	path = calypsonet-terminal-genericcard-uml-api
+	url = https://github.com/calypsonet/calypsonet-terminal-genericcard-uml-api
+	branch = doc
