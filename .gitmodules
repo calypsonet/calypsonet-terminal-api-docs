@@ -58,3 +58,7 @@
 	path = calypsonet-terminal-genericcard-uml-api
 	url = https://github.com/calypsonet/calypsonet-terminal-genericcard-uml-api
 	branch = doc
+[submodule "calypsonet-terminal-definitions-uml-api"]
+	path = calypsonet-terminal-definitions-uml-api
+	url = https://github.com/calypsonet/calypsonet-terminal-definitions-uml-api
+	branch = doc
