@@ -1,0 +1,79 @@
+{%- comment -%}
+  Renders the published specification versions of a single API repository as a
+  single table, most recent first.
+  Data comes from the page front matter (written by prepare_specification.sh):
+    page.repository      : repository name
+    page.latest_stable   : version number of the latest stable release ("" if none)
+    page.versions[]      : version, status (stable|snapshot), files.{diagram,html,pdf}.{name,size}
+  All links are RELATIVE so the download="" attribute is honoured (same-origin).
+{%- endcomment -%}
+{%- assign versions = page.versions -%}
+
+<style>
+  /* Font (Montserrat) and the base table charte (CNA-blue header, 1px #dedede
+     grid) are provided site-wide by the layout. Here we keep only what is
+     specific to the versions table. */
+  .spec-badge{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:10px;vertical-align:middle}
+  .spec-badge--stable{background:#dafbe1;color:#1a7f37}
+  .spec-badge--snapshot{background:#fff8c5;color:#9a6700}
+  .spec-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table.spec-versions th,table.spec-versions td{text-align:center}
+  table.spec-versions th[scope="row"]{font-weight:400}
+  table.spec-versions th[scope="row"].spec-stable{font-weight:700}
+  .spec-muted{color:#6a737d}
+  .spec-empty{color:#586069;font-style:italic;margin:16px 0}
+</style>
+
+{%- if versions and versions.size > 0 %}
+<div class="spec-table-wrap">
+<table class="spec-versions">
+  <thead>
+    <tr>
+      <th scope="col">Version</th>
+      <th scope="col">View</th>
+      <th scope="col">Download</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%- for v in versions %}
+    <tr>
+      <th scope="row"{% if v.version == page.latest_stable %} class="spec-stable"{% endif %}>{{ v.version }}
+        {%- if v.version == page.latest_stable %} <span class="spec-badge spec-badge--stable">stable</span>
+        {%- elsif v.status == "snapshot" %} <span class="spec-badge spec-badge--snapshot">snapshot</span>
+        {%- endif %}</th>
+      <td class="spec-view">
+        {%- if v.files.html %}
+        <a href="{{ v.version }}/{{ v.files.html.name }}"
+           aria-label="View the {{ v.version }} specification (HTML)">Specification</a>
+        {%- elsif v.files.diagram %}
+        <a href="{{ v.version }}/{{ v.files.diagram.name }}"
+           aria-label="View the {{ v.version }} class diagram (SVG)">Class diagram</a>
+        {%- else %}<span class="spec-muted">&mdash;</span>
+        {%- endif %}
+      </td>
+      <td class="spec-dl">
+        {%- assign sep = "" -%}
+        {%- if v.files.html %}
+        <a href="{{ v.version }}/{{ v.files.html.name }}" download="{{ v.files.html.name }}"
+           aria-label="Download the {{ v.version }} specification as HTML, {{ v.files.html.size }}">HTML</a>
+        {%- assign sep = " &middot; " -%}
+        {%- endif %}
+        {%- if v.files.pdf %}{{ sep }}
+        <a href="{{ v.version }}/{{ v.files.pdf.name }}" download="{{ v.files.pdf.name }}"
+           aria-label="Download the {{ v.version }} specification as PDF, {{ v.files.pdf.size }}">PDF</a>
+        {%- assign sep = " &middot; " -%}
+        {%- endif %}
+        {%- if v.files.diagram %}{{ sep }}
+        <a href="{{ v.version }}/{{ v.files.diagram.name }}" download="{{ v.files.diagram.name }}"
+           aria-label="Download the {{ v.version }} class diagram as SVG, {{ v.files.diagram.size }}">SVG</a>
+        {%- endif %}
+        {%- unless v.files.html or v.files.pdf or v.files.diagram %}<span class="spec-muted">&mdash;</span>{% endunless %}
+      </td>
+    </tr>
+  {%- endfor %}
+  </tbody>
+</table>
+</div>
+{%- else %}
+<p class="spec-empty">No specification version has been published yet.</p>
+{%- endif %}

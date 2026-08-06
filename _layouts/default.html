@@ -12,6 +12,12 @@
     <![endif]-->
     {% include head-custom.html %}
     <style>
+        /* Site font: Montserrat (CNA charte, --cna-font-body). Loaded from Google
+           Fonts and applied on <body> so every page/table inherits it. */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
         .breadcrumb {
             list-style: none;
             padding: 0;
@@ -60,14 +66,26 @@
             color: #0366d6;
             transition: color 0.2s;
         }
+        /* Tables follow the CNA specification charte (see the spec docs, e.g.
+           section "4.2. Logical namespaces"): CNA-blue header (#039EFD,
+           --cna-primary) with white bold text and a 1px #dedede grid. */
         table {
-            background: #f6f8fa;
+            background: #fff;
             border-collapse: collapse;
             width: 100%;
+            margin-bottom: 1.25em;
         }
         td, th {
-            padding: 8px 12px;
-            border: 1px solid #e1e4e8;
+            padding: .5625em .625em;
+            border: 1px solid #dedede;
+            line-height: 1.6;
+            vertical-align: middle;
+            color: rgba(0, 0, 0, .8);
+        }
+        thead th {
+            background: #039EFD;
+            color: #fff;
+            font-weight: 700;
         }
         tr:hover {
             background: #f0f3f6;

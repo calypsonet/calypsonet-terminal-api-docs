@@ -3,6 +3,9 @@
 #### All available Calypso Networks Association Terminal API documentation can be found below
 
 <table>
+ <thead>
+   <tr><th>Repository</th></tr>
+ </thead>
  <tbody>
    {% assign dirs = site.pages | map: 'path' | sort %}
    {% assign seen_dirs = "" | split: "," %}
@@ -24,6 +27,9 @@
 #### Archived libraries (moved to [Eclipse Keypop project](https://keypop.org))
 
 <table>
+ <thead>
+   <tr><th>Archived library</th></tr>
+ </thead>
  <tbody>
    {% assign archived_dirs = site.pages | map: 'path' | sort %}
    {% assign seen_archived_dirs = "" | split: "," %}
