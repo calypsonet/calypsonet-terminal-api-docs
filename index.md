@@ -1,10 +1,10 @@
 ---
 ---
-#### All available Calypso Networks Association Terminal API documentation can be found below
+#### Specifications of the Calypso Networks Association Terminal APIs
 
 <table>
  <thead>
-   <tr><th>Repository</th></tr>
+   <tr><th>Specification</th><th>Latest stable</th></tr>
  </thead>
  <tbody>
    {% assign dirs = site.pages | map: 'path' | sort %}
@@ -14,11 +14,12 @@
      {% if parts.size > 1 %}
        {% assign subdir = parts[0] %}
        {% unless subdir == "" or subdir == "." or subdir == "assets" or subdir == "archived" or seen_dirs contains subdir %}
-         {% comment %} Published under a short slug: the label is the title of the API page (its repository name) {% endcomment %}
+         {% comment %} Published under a short slug: the label is the API name (doc_name), or the title of the API page (its repository name) until its next publication {% endcomment %}
          {% assign index_path = subdir | append: "/index.md" %}
          {% assign api_page = site.pages | where: "path", index_path | first %}
          <tr>
-           <td><a href="{{ subdir | append: '/' | relative_url }}">{{ api_page.title | default: subdir }}</a></td>
+           <td><a href="{{ subdir | append: '/' | relative_url }}">{{ api_page.doc_name | default: api_page.title | default: subdir }}</a></td>
+           <td>{{ api_page.latest_stable | default: "&mdash;" }}</td>
          </tr>
          {% assign seen_dirs = seen_dirs | push: subdir %}
        {% endunless %}
@@ -27,11 +28,11 @@
  </tbody>
 </table>
 
-#### Archived libraries (moved to [Eclipse Keypop project](https://keypop.org))
+#### Archived APIs (now maintained in the [Eclipse Keypop project](https://keypop.org))
 
 <table>
  <thead>
-   <tr><th>Archived library</th></tr>
+   <tr><th>Archived API</th></tr>
  </thead>
  <tbody>
    {% assign archived_dirs = site.pages | map: 'path' | sort %}
