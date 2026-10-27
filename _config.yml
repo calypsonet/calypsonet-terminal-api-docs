@@ -19,5 +19,10 @@ defaults:
       path: "archived"
     values:
       sitemap: false
+  # Former paths (repository names), now redirect pages to the short slugs.
+  - scope:
+      path: "calypsonet-terminal-*"
+    values:
+      sitemap: false
 include:
   - "_*.html"

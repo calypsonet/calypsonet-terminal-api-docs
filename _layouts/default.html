@@ -129,6 +129,8 @@
                     </li>
                     {% endunless %}
                 {% endfor %}
+                {% comment %} API pages are published under a short slug: their front matter carries the repository name {% endcomment %}
+                {% if page.repository %}{% assign current_repo = page.repository %}{% endif %}
             </ul>
         </nav>
 

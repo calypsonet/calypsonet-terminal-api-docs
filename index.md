@@ -14,8 +14,11 @@
      {% if parts.size > 1 %}
        {% assign subdir = parts[0] %}
        {% unless subdir == "" or subdir == "." or subdir == "assets" or subdir == "archived" or seen_dirs contains subdir %}
+         {% comment %} Published under a short slug: the label is the title of the API page (its repository name) {% endcomment %}
+         {% assign index_path = subdir | append: "/index.md" %}
+         {% assign api_page = site.pages | where: "path", index_path | first %}
          <tr>
-           <td><a href="{{ subdir | relative_url }}">{{ subdir }}</a></td>
+           <td><a href="{{ subdir | append: '/' | relative_url }}">{{ api_page.title | default: subdir }}</a></td>
          </tr>
          {% assign seen_dirs = seen_dirs | push: subdir %}
        {% endunless %}

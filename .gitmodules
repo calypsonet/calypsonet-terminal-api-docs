@@ -1,26 +1,26 @@
-[submodule "calypsonet-terminal-reader-uml-api"]
-	path = calypsonet-terminal-reader-uml-api
-	url = https://github.com/calypsonet/calypsonet-terminal-reader-uml-api
+[submodule "reader"]
+	path = reader
+	url = https://github.com/calypsonet/calypsonet-terminal-reader-api-spec
 	branch = doc
-[submodule "calypsonet-terminal-calypso-crypto-asymmetric-uml-api"]
-	path = calypsonet-terminal-calypso-crypto-asymmetric-uml-api
-	url = https://github.com/calypsonet/calypsonet-terminal-calypso-crypto-asymmetric-uml-api
+[submodule "calypso-crypto-asymmetric"]
+	path = calypso-crypto-asymmetric
+	url = https://github.com/calypsonet/calypsonet-terminal-calypso-crypto-asymmetric-api-spec
 	branch = doc
-[submodule "calypsonet-terminal-calypso-crypto-symmetric-uml-api"]
-	path = calypsonet-terminal-calypso-crypto-symmetric-uml-api
-	url = https://github.com/calypsonet/calypsonet-terminal-calypso-crypto-symmetric-uml-api
+[submodule "calypso-crypto-symmetric"]
+	path = calypso-crypto-symmetric
+	url = https://github.com/calypsonet/calypsonet-terminal-calypso-crypto-symmetric-api-spec
 	branch = doc
-[submodule "calypsonet-terminal-calypso-crypto-legacysam-uml-api"]
-	path = calypsonet-terminal-calypso-crypto-legacysam-uml-api
-	url = https://github.com/calypsonet/calypsonet-terminal-calypso-crypto-legacysam-uml-api
+[submodule "calypso-crypto-legacysam"]
+	path = calypso-crypto-legacysam
+	url = https://github.com/calypsonet/calypsonet-terminal-calypso-crypto-legacysam-api-spec
 	branch = doc
-[submodule "calypsonet-terminal-calypso-card-uml-api"]
-	path = calypsonet-terminal-calypso-card-uml-api
-	url = https://github.com/calypsonet/calypsonet-terminal-calypso-card-uml-api
+[submodule "calypso-card"]
+	path = calypso-card
+	url = https://github.com/calypsonet/calypsonet-terminal-calypso-card-api-spec
 	branch = doc
-[submodule "calypsonet-terminal-card-uml-api"]
-	path = calypsonet-terminal-card-uml-api
-	url = https://github.com/calypsonet/calypsonet-terminal-card-uml-api
+[submodule "card"]
+	path = card
+	url = https://github.com/calypsonet/calypsonet-terminal-card-api-spec
 	branch = doc
 [submodule "archived/calypsonet-terminal-card-java-api"]
 	path = archived/calypsonet-terminal-card-java-api
@@ -50,15 +50,15 @@
 	path = archived/calypsonet-terminal-calypso-cpp-api
 	url = https://github.com/calypsonet/calypsonet-terminal-calypso-cpp-api
 	branch = doc
-[submodule "calypsonet-terminal-storagecard-uml-api"]
-	path = calypsonet-terminal-storagecard-uml-api
-	url = https://github.com/calypsonet/calypsonet-terminal-storagecard-uml-api
+[submodule "storagecard"]
+	path = storagecard
+	url = https://github.com/calypsonet/calypsonet-terminal-storagecard-api-spec
 	branch = doc
-[submodule "calypsonet-terminal-genericcard-uml-api"]
-	path = calypsonet-terminal-genericcard-uml-api
-	url = https://github.com/calypsonet/calypsonet-terminal-genericcard-uml-api
+[submodule "genericcard"]
+	path = genericcard
+	url = https://github.com/calypsonet/calypsonet-terminal-genericcard-api-spec
 	branch = doc
-[submodule "calypsonet-terminal-reader-definitions-uml-api"]
-	path = calypsonet-terminal-reader-definitions-uml-api
-	url = https://github.com/calypsonet/calypsonet-terminal-reader-definitions-uml-api
+[submodule "reader-definitions"]
+	path = reader-definitions
+	url = https://github.com/calypsonet/calypsonet-terminal-reader-definitions-api-spec
 	branch = doc

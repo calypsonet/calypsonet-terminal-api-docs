@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Page not found - Calypso Networks Association Terminal API Documentation</title>
+  <meta name="robots" content="noindex">
+  <script>
+    // Each API is published under a short slug, independent of its repository
+    // name. Paths built on a repository name, current or former (including
+    // names found in older links), are redirected to the matching slug.
+    (function () {
+      var slugs = {
+        "calypsonet-terminal-reader-uml-api": "reader",
+        "calypsonet-terminal-reader-definitions-uml-api": "reader-definitions",
+        "calypsonet-terminal-card-uml-api": "card",
+        "calypsonet-terminal-genericcard-uml-api": "genericcard",
+        "calypsonet-terminal-storagecard-uml-api": "storagecard",
+        "calypsonet-terminal-calypso-card-uml-api": "calypso-card",
+        "calypsonet-terminal-calypso-crypto-symmetric-uml-api": "calypso-crypto-symmetric",
+        "calypsonet-terminal-calypso-crypto-asymmetric-uml-api": "calypso-crypto-asymmetric",
+        "calypsonet-terminal-calypso-crypto-legacysam-uml-api": "calypso-crypto-legacysam",
+        "calypsonet-terminal-reader-api-spec": "reader",
+        "calypsonet-terminal-reader-definitions-api-spec": "reader-definitions",
+        "calypsonet-terminal-card-api-spec": "card",
+        "calypsonet-terminal-genericcard-api-spec": "genericcard",
+        "calypsonet-terminal-storagecard-api-spec": "storagecard",
+        "calypsonet-terminal-calypso-card-api-spec": "calypso-card",
+        "calypsonet-terminal-calypso-crypto-symmetric-api-spec": "calypso-crypto-symmetric",
+        "calypsonet-terminal-calypso-crypto-asymmetric-api-spec": "calypso-crypto-asymmetric",
+        "calypsonet-terminal-calypso-crypto-legacysam-api-spec": "calypso-crypto-legacysam",
+        "calypsonet-terminal-definitions-uml-api": "reader-definitions",
+        "calypsonet-terminal-calypso-uml-api": "calypso-card",
+        "calypsonet-terminal-crypto-asymmetric-uml-api": "calypso-crypto-asymmetric",
+        "calypsonet-terminal-crypto-symmetric-uml-api": "calypso-crypto-symmetric"
+      };
+      var match = window.location.pathname.match(/^\/([^\/]+)(\/.*)?$/);
+      if (match && Object.prototype.hasOwnProperty.call(slugs, match[1])) {
+        window.location.replace("/" + slugs[match[1]] + (match[2] || "/") +
+          window.location.search + window.location.hash);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <h1>Page not found</h1>
+  <p>The requested page does not exist. See the <a href="/">list of the Terminal API specifications</a>.</p>
+</body>
+</html>
