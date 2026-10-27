@@ -4,8 +4,14 @@
   Data comes from the page front matter (written by prepare_specification.sh):
     page.repository      : repository name
     page.latest_stable   : version number of the latest stable release ("" if none)
+    page.latest_stable_path : fixed link to that release, i.e. "latest-stable/"
+                           ("" if none or if that release has no HTML specification;
+                           absent from pages published before it existed)
     page.versions[]      : version, status (stable|snapshot), files.{diagram,html,pdf}.{name,size}
   All links are RELATIVE so the download="" attribute is honoured (same-origin).
+  When published in the specification format (HTML), the latest stable release
+  is viewed through its fixed link, as on the Keyple and Keypop documentation
+  sites; downloads keep the versioned files.
 {%- endcomment -%}
 {%- assign versions = page.versions -%}
 
@@ -36,6 +42,10 @@
   </thead>
   <tbody>
   {%- for v in versions %}
+    {%- assign fixed = false -%}
+    {%- if v.version == page.latest_stable and v.files.html and page.latest_stable_path and page.latest_stable_path != "" -%}
+      {%- assign fixed = true -%}
+    {%- endif %}
     <tr>
       <th scope="row"{% if v.version == page.latest_stable %} class="spec-stable"{% endif %}>{{ v.version }}
         {%- if v.version == page.latest_stable %} <span class="spec-badge spec-badge--stable">stable</span>
@@ -43,7 +53,8 @@
         {%- endif %}</th>
       <td class="spec-view">
         {%- if v.files.html %}
-        <a href="{{ v.version }}/{{ v.files.html.name }}"
+        <a href="{% if fixed %}{{ page.latest_stable_path }}{% else %}{{ v.version }}/{{ v.files.html.name }}{% endif %}"
+           {%- if fixed %} title="Fixed link to the latest stable version"{% endif %}
            aria-label="View the {{ v.version }} specification (HTML)">Specification</a>
         {%- elsif v.files.diagram %}
         <a href="{{ v.version }}/{{ v.files.diagram.name }}"
